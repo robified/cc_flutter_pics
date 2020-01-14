@@ -11,6 +11,10 @@ class ImageList extends StatelessWidget {
       itemCount: images.length,
       itemBuilder: (context, int index) {
         return Container(
+          decoration: BoxDecoration(
+            border: Border.all(color: Colors.grey),
+          ),
+          padding: EdgeInsets.all(20.0),
           margin: EdgeInsets.all(20.0),
           child: Image.network(images[index].url),
         );
