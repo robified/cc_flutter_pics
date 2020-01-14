@@ -3,5 +3,7 @@ import 'package:flutter/material.dart';
 
 // create a class that will be our custom widget
 // this class must extend the 'StatelessWidget' base class
-
-// Must define a 'build' method that returns the widgets that *this* widget will show
+// App is now a subclass of Statelesswidget
+class App extends StatelessWidget {
+  // Must define a 'build' method that returns the widgets that *this* widget will show
+}
