@@ -15,13 +15,19 @@ class App extends StatefulWidget {
 // App is now a subclass of Statelesswidget
 class AppState extends State<App> {
   int counter = 0;
+  List<ImageModel> images = [];
 
   void fetchImage() async {
     counter++;
+
     // the json data that we care about has nested things inside it
     var response =
         await get('https://jsonplaceholder.typicode.com/photos/$counter');
     var imageModel = ImageModel.fromJson(json.decode(response.body));
+
+    setState(() {
+      images.add(imageModel);
+    });
   }
 
   // Must define a 'build' method that returns the widgets that *this* widget will show
